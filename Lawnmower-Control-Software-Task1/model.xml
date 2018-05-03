@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+	<featureModel>
+		<properties/>
+		<struct>
+			<and abstract="true" mandatory="true" name="Lawnmower">
+				<and mandatory="true" name="Speed Control">
+					<description>
+						SPEED CONTROL FOR BLADE 
+					</description>
+					<description>
+						SPEED CONTROL FOR BLADE 
+					</description>
+					<feature mandatory="true" name="360 RPMs">
+						<description>
+							Software based blade speed control set to 360 Rotations Per Minute (RPMs) 
+						</description>
+					</feature>
+					<feature name="480 RPMs">
+						<description>
+							Software based blade speed control set to 480 Rotations Per Minute (RPMs) 
+						</description>
+					</feature>
+					<feature name="720 RPMs">
+						<description>
+							Software based blade speed control set to 720 Rotations Per Minute (RPMs) 
+						</description>
+					</feature>
+				</and>
+				<and mandatory="true" name="Blade Rotation">
+					<description>
+						DIRECTION OF BLADE ROTATION
+					</description>
+					<description>
+						DIRECTION OF BLADE ROTATION
+					</description>
+					<feature mandatory="true" name="Clockwise">
+						<description>
+							CLOCKWISE BLADE ROTATION
+						</description>
+					</feature>
+					<feature name="AntiClockwise">
+						<description>
+							ANTI-CLOCKWISE BLADE ROATION
+						</description>
+					</feature>
+				</and>
+				<alt mandatory="true" name="Vehicle Operation">
+					<description>
+						METHOD OF VEHICLE OPERATION/CONTROL
+						
+					</description>
+					<description>
+						METHOD OF VEHICLE OPERATION/CONTROL
+						
+					</description>
+					<feature mandatory="true" name="Manual Driven">
+						<description>
+							MANUEL DRIVEN  - Vehicle is pushed from behind (No required Software control in this configuration)
+						</description>
+					</feature>
+					<alt mandatory="true" name="Motor Driven">
+						<description>
+							Mounted Vehicles Operation Mode (Human drives the Lawnmower)
+						</description>
+						<description>
+							Mounted Vehicles Operation Mode (Human drives the Lawnmower)
+						</description>
+						<feature mandatory="true" name="Manual Gear">
+							<description>
+								Manuel Gear Controlled 
+							</description>
+						</feature>
+						<feature mandatory="true" name="Automatic Gear">
+							<description>
+								Automatic Gear Controlled
+							</description>
+						</feature>
+					</alt>
+				</alt>
+				<and name="I-O-T Module">
+					<description>
+						Internet Of Things Module - To enable Automation and deliver Mowing Insights trhough software generated reporting
+						
+					</description>
+					<description>
+						Internet Of Things Module - To enable Automation and deliver Mowing Insights trhough software generated reporting
+						
+					</description>
+					<or mandatory="true" name="OS">
+						<description>
+							Operating Systems from which user can access the IOT Module
+							
+						</description>
+						<description>
+							Operating Systems from which user can access the IOT Module
+							
+						</description>
+						<feature mandatory="true" name="Android"/>
+						<feature mandatory="true" name="iOS"/>
+						<feature mandatory="true" name="Web"/>
+					</or>
+					<and mandatory="true" name="Sensor">
+						<description>
+							Sensors - Accelerometer, Gyroscope, Proximity sensor, Light Sensor
+						</description>
+						<description>
+							Sensors - Accelerometer, Gyroscope, Proximity sensor, Light Sensor
+						</description>
+						<feature mandatory="true" name="Accelerometer"/>
+						<feature mandatory="true" name="Gyroscope"/>
+						<feature mandatory="true" name="Proximity Sensor"/>
+						<feature mandatory="true" name="Light Sensor"/>
+					</and>
+					<feature name="Automation SW">
+						<description>
+							Automation Software- To Contain - Task Scheduler &amp; Area Planner
+						</description>
+					</feature>
+					<feature mandatory="true" name="Report Generator">
+						<description>
+							To generate different reports on a Daily, Monthly and Yearly Basis
+							 
+						</description>
+					</feature>
+				</and>
+			</and>
+		</struct>
+		<constraints/>
+		<calculations Auto="true" Constraints="true" Features="true" Redundant="true" Tautology="true"/>
+		<comments/>
+		<featureOrder userDefined="false"/>
+	</featureModel>
