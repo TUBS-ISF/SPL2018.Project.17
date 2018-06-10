@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<plugins>
+	<interface id="interfaces.IOs">
+		<class>Android</class>
+	</interface>
+	
+	<interface id="interfaces.IOs">
+		<class>IOS</class>
+	</interface>
+	
+	<interface id="interfaces.IOs">
+		<class>Web</class>
+	</interface>
+</plugins>
