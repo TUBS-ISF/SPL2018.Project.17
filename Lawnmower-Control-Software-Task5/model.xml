@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+	<featureModel>
+		<properties/>
+		<struct>
+			<and abstract="true" mandatory="true" name="LawnmowerControlSoftwareTask5">
+				<feature name="Base"/>
+				<and abstract="true" mandatory="true" name="SCS">
+					<description>
+						SPEED CONTROL FOR BLADE
+					</description>
+					<description>
+						SPEED CONTROL FOR BLADE
+					</description>
+					<feature abstract="true" mandatory="true" name="360RPM">
+						<description>
+							Software based blade speed control set to 360 Rotations Per Minute (RPMs)
+						</description>
+					</feature>
+					<feature abstract="true" name="480RPM">
+						<description>
+							Software based blade speed control set to 480 Rotations Per Minute (RPMs)
+						</description>
+					</feature>
+					<feature abstract="true" name="720RPM">
+						<description>
+							Software based blade speed control set to 720 Rotations Per Minute (RPMs)
+						</description>
+					</feature>
+				</and>
+				<and abstract="true" mandatory="true" name="Blade Rotation">
+					<description>
+						DIRECTION OF BLADE ROTATION
+					</description>
+					<description>
+						DIRECTION OF BLADE ROTATION
+					</description>
+					<feature abstract="true" mandatory="true" name="Clockwise">
+						<description>
+							CLOCKWISE BLADE ROTATION
+						</description>
+					</feature>
+					<feature abstract="true" name="AntiClockwise">
+						<description>
+							ANTI-CLOCKWISE BLADE ROATION
+						</description>
+					</feature>
+				</and>
+				<alt abstract="true" mandatory="true" name="Vehicle Operation">
+					<description>
+						METHOD OF VEHICLE OPERATION/CONTROL
+					</description>
+					<description>
+						METHOD OF VEHICLE OPERATION/CONTROL
+					</description>
+					<feature abstract="true" mandatory="true" name="MD">
+						<description>
+							MANUEL DRIVEN  - Vehicle is pushed from behind (No required Software control in this configuration)
+						</description>
+					</feature>
+					<alt abstract="true" mandatory="true" name="MTD">
+						<description>
+							Mounted Vehicles Operation Mode (Human drives the Lawnmower)
+						</description>
+						<description>
+							Mounted Vehicles Operation Mode (Human drives the Lawnmower)
+						</description>
+						<feature abstract="true" mandatory="true" name="Manual Gear">
+							<description>
+								Manuel Gear Controlled
+							</description>
+						</feature>
+						<feature abstract="true" mandatory="true" name="Automatic Gear">
+							<description>
+								Automatic Gear Controlled
+							</description>
+						</feature>
+					</alt>
+					<feature abstract="true" mandatory="true" name="RD">
+						<description>
+							Remotely Driven - Powered by an Electric Motor and Controlled by Automation or  Remote
+						</description>
+					</feature>
+				</alt>
+				<and name="I-O-T Module">
+					<description>
+						Internet Of Things Module - To enable Automation and deliver Mowing Insights trhough software generated reporting
+					</description>
+					<description>
+						Internet Of Things Module - To enable Automation and deliver Mowing Insights trhough software generated reporting
+					</description>
+					<alt mandatory="true" name="OS">
+						<description>
+							Operating Systems from which user can access the IOT Module
+						</description>
+						<description>
+							Operating Systems from which user can access the IOT Module
+						</description>
+						<feature mandatory="true" name="Android"/>
+						<feature mandatory="true" name="iOS"/>
+						<feature mandatory="true" name="Web"/>
+					</alt>
+					<and abstract="true" mandatory="true" name="Sensor">
+						<description>
+							Sensors - Accelerometer, Gyroscope, Proximity sensor, Light Sensor
+						</description>
+						<description>
+							Sensors - Accelerometer, Gyroscope, Proximity sensor, Light Sensor
+						</description>
+						<feature abstract="true" mandatory="true" name="ACCEL">
+							<description>
+								Accelerometer Sensor for speed
+							</description>
+						</feature>
+						<feature abstract="true" mandatory="true" name="GYRO">
+							<description>
+								Gyroscope Sensor
+							</description>
+						</feature>
+						<feature abstract="true" mandatory="true" name="PROX">
+							<description>
+								Proximity Sensor
+							</description>
+						</feature>
+						<feature abstract="true" mandatory="true" name="LIGHT"/>
+					</and>
+					<and abstract="true" mandatory="true" name="ASW">
+						<description>
+							Automation Software(SW) - To Contain - Task Scheduler &amp; Area Planner
+						</description>
+						<description>
+							Automation Software(SW) - To Contain - Task Scheduler &amp; Area Planner
+						</description>
+						<feature mandatory="true" name="AP">
+							<description>
+								Area Planner -  Would manage the selection of areas to be mowned
+							</description>
+						</feature>
+						<alt abstract="true" name="TS">
+							<description>
+								Task Scheduler -  Would manage the scheduling of Mowing Tasks 
+								e.g. When, where and How many times peer day or week
+							</description>
+							<description>
+								Task Scheduler -  Would manage the scheduling of Mowing Tasks 
+								e.g. When, where and How many times peer day or week
+							</description>
+							<feature mandatory="true" name="2Task">
+								<description>
+									Maximum of 2 tasks
+								</description>
+							</feature>
+							<feature mandatory="true" name="MoreTasks">
+								<description>
+									2 or more tasks schedulable
+								</description>
+							</feature>
+						</alt>
+					</and>
+					<and abstract="true" name="RG">
+						<description>
+							Report Generator - To generate different reports on a Daily, Monthly and Yearly Basis
+						</description>
+						<description>
+							Report Generator - To generate different reports on a Daily, Monthly and Yearly Basis
+						</description>
+						<feature mandatory="true" name="BR">
+							<description>
+								Basic Report Option
+							</description>
+						</feature>
+						<feature name="ER">
+							<description>
+								Expert Report Option
+							</description>
+						</feature>
+					</and>
+					<feature abstract="true" mandatory="true" name="RD-IOT">
+						<description>
+							Remotely Driven - Powered by an Electric Motor and Controlled by Automation or  Remote
+						</description>
+					</feature>
+				</and>
+			</and>
+		</struct>
+		<constraints/>
+		<calculations Auto="true" Constraints="true" Features="true" Redundant="true" Tautology="true"/>
+		<comments/>
+		<featureOrder userDefined="false"/>
+	</featureModel>
