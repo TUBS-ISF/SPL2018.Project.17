@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configuration>
+    <feature automatic="selected" name="Lawnmower"/>
+    <feature automatic="selected" name="SCS"/>
+    <feature automatic="selected" name="360RPM"/>
+    <feature automatic="selected" name="Blade Rotation"/>
+    <feature automatic="selected" name="Clockwise"/>
+    <feature automatic="selected" name="Vehicle Operation"/>
+</configuration>
